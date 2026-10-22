@@ -122,7 +122,7 @@ export function Projects() {
                 ))}
               </div>
               <div className="project-preview">
-                Explore concept <ArrowUpRight size={14} />
+                Explore case study <ArrowUpRight size={14} />
               </div>
             </div>
           </button>
@@ -143,10 +143,11 @@ export function Projects() {
           >
             <X size={22} />
           </button>
-          <span className="eyebrow">CONCEPT CASE STUDY · PREVIEW</span>
+          <span className="eyebrow">PROJECT CASE STUDY</span>
           <h2>{selected.title}</h2>
           <p>{selected.detail}</p>
-          <h3>Proposed scope</h3>
+          <p className="dialog-note">{selected.status}</p>
+          <h3>Work and responsibilities</h3>
           <ul>
             {selected.scope.map((item) => (
               <li key={item}>
@@ -156,8 +157,7 @@ export function Projects() {
             ))}
           </ul>
           <p className="dialog-note">
-            This is a placeholder for a future case study. Implementation
-            details and verified outcomes will be added when available.
+            {selected.note}
           </p>
         </div>
       </dialog>
