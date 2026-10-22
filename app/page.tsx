@@ -101,7 +101,19 @@ export default function Home() {
               Systems drive growth.
             </div>
           </div>
-          <SystemVisual />
+          <div className="hero-portrait-area">
+            <div className="hero-portrait-ring">
+              <Image
+                src="/logos/portfolio-avatar.jpg"
+                alt="Praise Fredrick, GTM Engineer"
+                fill
+                sizes="(max-width: 520px) 280px, (max-width: 760px) 350px, 430px"
+                priority
+                className="hero-portrait-image"
+              />
+            </div>
+            <span className="hero-portrait-caption">PRAISE FREDRICK · GTM ENGINEER</span>
+          </div>
           <div className="hero-bottom">
             <span>BUILT FOR THE WAY REVENUE WORKS.</span>
             <a href="#expertise">
