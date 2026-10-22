@@ -54,6 +54,14 @@ const skillGroups = [
     skills: ["Workflow automation", "AI assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
   },
   {
+    title: "API Integration & CLI Workflows",
+    skills: ["CRM API integrations", "Reproducible CLI workflows", "AI-assisted development with Claude Code & Codex"],
+  },
+  {
+    title: "Testing & Reliability",
+    skills: ["Retry handling", "Synthetic data", "Integration testing", "Technical documentation"],
+  },
+  {
     title: "Growth & Operations",
     skills: ["Lead generation", "Paid campaign strategy", "Client onboarding", "Funnel optimization", "Customer operations", "Reporting & KPI analysis"],
   },
@@ -184,7 +192,7 @@ export default function Home() {
               <span className="eyebrow"><span /> CAPABILITIES</span>
               <h2>Practical skills. <span>Connected thinking.</span></h2>
             </div>
-            <p>From clean CRM foundations to thoughtful outbound and reliable automation.</p>
+            <p>From CRM API integrations and reproducible CLI workflows to tested automation, reliable execution, and clear documentation.</p>
           </div>
           <div className="capabilities-grid">
             {skillGroups.map((group) => (
