@@ -8,7 +8,7 @@ export const projects = [
     tags: ["Data hygiene", "Lifecycle automation"],
     type: "health",
     detail:
-      "A concept for a HubSpot system that identifies incomplete records, flags lifecycle inconsistencies, and routes data-quality tasks to the right owner.",
+      "A concept for a HubSpot system that identifies incomplete records, flags lifecycle inconsistencies, and routes data quality tasks to the right owner.",
     scope: [
       "CRM property and lifecycle audit",
       "Data validation and enrichment workflows",
@@ -17,14 +17,14 @@ export const projects = [
   },
   {
     number: "02",
-    title: "Signal-Based Outbound",
+    title: "Signal Based Outbound",
     category: "PROSPECTING · AUTOMATION",
     description:
       "Turn meaningful buying signals into relevant outreach, with the right context at every step.",
     tags: ["Intent signals", "Outbound workflows"],
     type: "signal",
     detail:
-      "A concept for connecting account signals, prospect research, and human-reviewed outreach in a coordinated outbound workflow.",
+      "A concept for connecting account signals, prospect research, and reviewed by people outreach in a coordinated outbound workflow.",
     scope: [
       "Signal collection and account qualification",
       "Enrichment and contextual research",
