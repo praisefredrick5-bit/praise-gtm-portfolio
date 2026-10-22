@@ -39,6 +39,31 @@ const expertise = [
     text: "The architecture behind alignment. Lead scoring, pipeline processes, and a connected customer journey.",
   },
 ];
+const skillGroups = [
+  {
+    title: "CRM & Revenue Operations",
+    skills: ["HubSpot CRM administration", "CRM health audits", "Data hygiene & deduplication", "Lifecycle design", "Lead scoring", "ICP segmentation", "Pipeline architecture", "Data governance"],
+  },
+  {
+    title: "Prospecting & Outbound",
+    skills: ["ICP research", "Account qualification", "Buying-signal research", "Lead enrichment", "Outbound sequencing", "Personalization", "Suppression rules", "Lead nurturing"],
+  },
+  {
+    title: "Automation & Systems",
+    skills: ["Workflow automation", "AI-assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
+  },
+  {
+    title: "Growth & Operations",
+    skills: ["Lead generation", "Paid campaign strategy", "Client onboarding", "Funnel optimization", "Customer operations", "Reporting & KPI analysis"],
+  },
+];
+const toolGroups = [
+  { title: "CRM & Revenue", tools: ["HubSpot"] },
+  { title: "Prospecting & Intelligence", tools: ["Clay", "Apollo", "Gojiberry", "Sumble", "LinkedIn Sales Navigator"] },
+  { title: "Outbound & Messaging", tools: ["Instantly", "Lemlist", "Octave", "HubSpot Sequences"] },
+  { title: "Automation & AI", tools: ["Claude Code", "ChatGPT", "Make", "Zapier", "n8n", "Swan"] },
+  { title: "Data & Development", tools: ["Excel", "Google Sheets", "GitHub", "Codex", "Vercel"] },
+];
 export default function Home() {
   return (
     <>
@@ -140,6 +165,47 @@ export default function Home() {
                 <ArrowDownRight className="expertise-arrow" size={19} />
               </article>
             ))}
+          </div>
+        </section>
+        <section className="section container capabilities-section" id="skills">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow"><span /> CAPABILITIES</span>
+              <h2>Practical skills. <span>Connected thinking.</span></h2>
+            </div>
+            <p>From clean CRM foundations to thoughtful outbound and reliable automation.</p>
+          </div>
+          <div className="capabilities-grid">
+            {skillGroups.map((group) => (
+              <article className="capability-panel" key={group.title}>
+                <h3>{group.title}</h3>
+                <ul className="capability-tags">
+                  {group.skills.map((skill) => <li key={skill}>{skill}</li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section className="section toolkit-section" id="tools">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow"><span /> MY TOOLKIT</span>
+                <h2>Tools for <span>revenue systems.</span></h2>
+              </div>
+              <p>Platforms I work with, learn, and evaluate to solve GTM challenges. Listing a tool does not imply certification or advanced proficiency.</p>
+            </div>
+            <div className="toolkit-grid">
+              {toolGroups.map((group) => (
+                <article className="toolkit-panel" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul className="capability-tags">
+                    {group.tools.map((tool) => <li key={tool}>{tool}</li>)}
+                  </ul>
+                </article>
+              ))}
+            </div>
+            <p className="toolkit-note">HubSpot Revenue Operations certified · Tool experience varies by platform.</p>
           </div>
         </section>
         <section className="work-section section" id="work">
