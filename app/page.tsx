@@ -272,10 +272,18 @@ export default function Home() {
               together.
             </p>
             <div className="contact-status">
-              <span className="live-dot" /> Direct contact details coming soon
+              <span className="live-dot" /> Available to connect
             </div>
-            <a className="inline-link" href="#work">
-              Explore the work in the meantime <ArrowUpRight size={16} />
+            <a className="inline-link" href="mailto:Praisefpl@gmail.com">
+              Email me: Praisefpl@gmail.com <ArrowUpRight size={16} />
+            </a>
+            <a
+              className="inline-link"
+              href="https://www.linkedin.com/in/praise-fredrick-0145163b6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Connect on LinkedIn <ArrowUpRight size={16} />
             </a>
           </div>
         </section>
