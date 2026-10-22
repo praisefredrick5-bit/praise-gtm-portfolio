@@ -16,28 +16,28 @@ import { Projects } from "@/components/projects";
 import { SystemVisual } from "@/components/system-visual";
 const expertise = [
   {
-    icon: Database,
+    icon: GitBranch,
     number: "01",
-    title: "CRM, HubSpot & Salesforce",
-    text: "HubSpot and Salesforce systems built around how your business actually works. From lifecycle design to clean, connected CRM data.",
+    title: "GTM Systems Architecture",
+    text: "I design how revenue tools, data, and teams work together—from system boundaries and lifecycle logic to dependable integrations and handoffs.",
   },
   {
     icon: Radar,
     number: "02",
-    title: "Prospecting & outbound",
-    text: "Thoughtful prospecting systems that connect buying signals, enriched data, and relevant outreach.",
+    title: "Prospect & Signal Intelligence",
+    text: "I engineer prospecting workflows that combine ICP criteria, account research, enrichment, and buying signals to prioritize relevant opportunities.",
   },
   {
     icon: Workflow,
     number: "03",
-    title: "Automation & integration",
-    text: "Less manual work. Better handoffs. Workflows and integrations that keep your revenue engine moving.",
+    title: "AI & Workflow Engineering",
+    text: "I build and design AI-assisted workflows, automations, and integrations that reduce manual effort while keeping execution observable and controlled.",
   },
   {
     icon: Layers3,
     number: "04",
-    title: "Revenue operations",
-    text: "The architecture behind alignment. Lead scoring, pipeline processes, and a connected customer journey.",
+    title: "Revenue Operations Infrastructure",
+    text: "I create the operational foundations behind growth: clean data, lead scoring, lifecycle rules, pipeline visibility, and failure-aware processes.",
   },
 ];
 const skillGroups = [
@@ -137,14 +137,15 @@ export default function Home() {
                 <span /> WHAT I DO
               </span>
               <h2>
-                Less friction.
+                Intelligent systems.
                 <br />
-                <span>More forward motion.</span>
+                <span>Engineered for growth.</span>
               </h2>
             </div>
             <p>
-              I connect the dots between your tools, data, and teams—so your
-              revenue systems work as hard as you do.
+              I architect the infrastructure behind modern go-to-market:
+              connected data, intelligent prospecting, AI-assisted execution,
+              and reliable revenue operations.
             </p>
           </div>
           <div className="expertise-grid">
