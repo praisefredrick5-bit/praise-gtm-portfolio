@@ -11,6 +11,8 @@ export function Navigation() {
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
           <a href="#expertise">Expertise</a>
+          <a href="#skills">Skills</a>
+          <a href="#tools">Tools</a>
           <a href="#work">Selected work</a>
           <a href="#about">About</a>
         </nav>
@@ -35,6 +37,8 @@ export function Navigation() {
         >
           {[
             ["Expertise", "expertise"],
+            ["Skills", "skills"],
+            ["Tools", "tools"],
             ["Selected work", "work"],
             ["About", "about"],
             ["Contact", "contact"],
