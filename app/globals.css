@@ -1641,3 +1641,15 @@ h2 span {
     transition: none !important;
   }
 }
+
+/* Skills and tools */
+.capabilities-grid, .toolkit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.capability-panel, .toolkit-panel { border: 1px solid #30263b; background: linear-gradient(135deg, #18131e, #101014); border-radius: 8px; padding: 27px; }
+.capability-panel h3, .toolkit-panel h3 { font-size: 15px; font-weight: 500; margin: 0 0 22px; color: #e7dced; }
+.capability-tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 9px; }
+.capability-tags li { padding: 9px 11px; border-radius: 5px; border: 1px solid #3b3047; background: #211a2a; color: #c1b2d0; font-size: 11px; line-height: 1.35; }
+.toolkit-section { border-block: 1px solid #ffffff0a; background: #0e0d11; }
+.toolkit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.toolkit-note { font-size: 11px; line-height: 1.8; color: #9687a5; margin-top: 23px; }
+@media (max-width: 760px) { .toolkit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .capabilities-grid, .toolkit-grid { grid-template-columns: 1fr; } .capability-panel, .toolkit-panel { padding: 22px; } }
