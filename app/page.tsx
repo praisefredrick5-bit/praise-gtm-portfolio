@@ -83,8 +83,10 @@ export default function Home() {
               I Build the Systems Behind <span>Revenue Growth.</span>
             </h1>
             <p className="hero-description">
-              I design and connect CRM infrastructure, prospecting workflows,
-              lead scoring, outbound automation, and revenue operations systems.
+              I engineer intelligent go to market systems that turn data,
+              buying signals, and AI into coordinated revenue execution. From
+              multi agent orchestration to automated prospecting and scalable
+              growth infrastructure.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
