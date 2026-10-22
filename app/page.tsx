@@ -37,7 +37,7 @@ const expertise = [
     icon: Layers3,
     number: "04",
     title: "Revenue Operations Infrastructure",
-    text: "I create the operational foundations behind growth: clean data, lead scoring, lifecycle rules, pipeline visibility, and built to handle failures processes.",
+    text: "I create the operational foundations behind growth: clean data, lead scoring, lifecycle rules, pipeline visibility, and processes designed to handle failures.",
   },
 ];
 const skillGroups = [
@@ -220,7 +220,7 @@ export default function Home() {
                 A look at how I approach revenue challenges.
                 <br />
                 <span className="preview-note">
-                  Concept previews · Full case studies coming soon
+                  Real work, tested systems, and architecture in progress
                 </span>
               </p>
             </div>
