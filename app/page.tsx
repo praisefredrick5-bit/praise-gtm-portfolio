@@ -19,7 +19,7 @@ const expertise = [
     icon: GitBranch,
     number: "01",
     title: "GTM Systems Architecture",
-    text: "I design how revenue tools, data, and teams work together—from system boundaries and lifecycle logic to dependable integrations and handoffs.",
+    text: "I design how revenue tools, data, and teams work together, from system boundaries and lifecycle logic to dependable integrations and handoffs.",
   },
   {
     icon: Radar,
@@ -31,13 +31,13 @@ const expertise = [
     icon: Workflow,
     number: "03",
     title: "AI & Workflow Engineering",
-    text: "I build and design AI-assisted workflows, automations, and integrations that reduce manual effort while keeping execution observable and controlled.",
+    text: "I build and design AI assisted workflows, automations, and integrations that reduce manual effort while keeping execution observable and controlled.",
   },
   {
     icon: Layers3,
     number: "04",
     title: "Revenue Operations Infrastructure",
-    text: "I create the operational foundations behind growth: clean data, lead scoring, lifecycle rules, pipeline visibility, and failure-aware processes.",
+    text: "I create the operational foundations behind growth: clean data, lead scoring, lifecycle rules, pipeline visibility, and built to handle failures processes.",
   },
 ];
 const skillGroups = [
@@ -47,11 +47,11 @@ const skillGroups = [
   },
   {
     title: "Prospecting & Outbound",
-    skills: ["ICP research", "Account qualification", "Buying-signal research", "Lead enrichment", "Outbound sequencing", "Personalization", "Suppression rules", "Lead nurturing"],
+    skills: ["ICP research", "Account qualification", "Buying signal research", "Lead enrichment", "Outbound sequencing", "Personalization", "Suppression rules", "Lead nurturing"],
   },
   {
     title: "Automation & Systems",
-    skills: ["Workflow automation", "AI-assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
+    skills: ["Workflow automation", "AI assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
   },
   {
     title: "Growth & Operations",
@@ -143,8 +143,8 @@ export default function Home() {
               </h2>
             </div>
             <p>
-              I architect the infrastructure behind modern go-to-market:
-              connected data, intelligent prospecting, AI-assisted execution,
+              I architect the infrastructure behind modern go to market:
+              connected data, intelligent prospecting, AI assisted execution,
               and reliable revenue operations.
             </p>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
             </p>
             <p>
               I bring a systems mindset to CRM infrastructure, automation, and
-              revenue operations—connecting the details to the bigger picture.
+              revenue operations, connecting the details to the bigger picture.
             </p>
             <a className="inline-link" href="#contact">
               Let’s build something that works <ArrowUpRight size={17} />
