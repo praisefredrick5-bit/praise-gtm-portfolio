@@ -1653,3 +1653,27 @@ h2 span {
 .toolkit-note { font-size: 11px; line-height: 1.8; color: #9687a5; margin-top: 23px; }
 @media (max-width: 760px) { .toolkit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .capabilities-grid, .toolkit-grid { grid-template-columns: 1fr; } .capability-panel, .toolkit-panel { padding: 22px; } }
+
+/* Connected tools stay visible in a balanced grid on every screen size. */
+.toolbelt-inner { padding-top: 25px; padding-bottom: 25px; }
+.toolbelt-label, .toolbelt-end { flex-shrink: 0; }
+.toolbelt-tools { display: grid; grid-template-columns: repeat(4, max-content); justify-content: center; align-items: center; gap: 23px 30px; flex: 1; }
+.toolbelt-tools .tool-name { font-size: 19px; white-space: nowrap; }
+.toolbelt-tools .clay { font-size: 24px; }
+.tool-name img { flex-shrink: 0; opacity: .85; }
+@media (max-width: 1050px) {
+  .toolbelt-tools { gap: 22px; }
+  .toolbelt-tools .tool-name { font-size: 17px; }
+}
+@media (max-width: 760px) {
+  .toolbelt-inner { flex-direction: column; gap: 23px; }
+  .toolbelt-label { text-align: center; }
+  .toolbelt-label br { display: none; }
+  .toolbelt-tools { width: 100%; grid-template-columns: repeat(4, max-content); justify-content: space-between; gap: 24px 15px; }
+  .toolbelt-tools .tool-name { font-size: 16px; gap: 6px; }
+  .toolbelt-tools .clay { font-size: 21px; }
+}
+@media (max-width: 520px) {
+  .toolbelt-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 15px; }
+  .toolbelt-tools .tool-name { justify-content: center; font-size: 17px; }
+}

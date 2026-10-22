@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowDownRight,
@@ -17,8 +18,8 @@ const expertise = [
   {
     icon: Database,
     number: "01",
-    title: "CRM & HubSpot systems",
-    text: "A reliable source of truth, built around how your business actually works. From lifecycle design to clean, connected data.",
+    title: "CRM, HubSpot & Salesforce",
+    text: "HubSpot and Salesforce systems built around how your business actually works. From lifecycle design to clean, connected CRM data.",
   },
   {
     icon: Radar,
@@ -58,7 +59,7 @@ const skillGroups = [
   },
 ];
 const toolGroups = [
-  { title: "CRM & Revenue", tools: ["HubSpot"] },
+  { title: "CRM & Revenue", tools: ["HubSpot", "Salesforce"] },
   { title: "Prospecting & Intelligence", tools: ["Clay", "Apollo", "Gojiberry", "Sumble", "LinkedIn Sales Navigator"] },
   { title: "Outbound & Messaging", tools: ["Instantly", "Lemlist", "Octave", "HubSpot Sequences"] },
   { title: "Automation & AI", tools: ["Claude Code", "ChatGPT", "Make", "Zapier", "n8n", "Swan"] },
@@ -113,19 +114,14 @@ export default function Home() {
               <br />
               CONNECTED TOOLS.
             </span>
-            <div className="tool-name hubspot">
-              <GitBranch size={24} />
-              HubSpot
-            </div>
-            <div className="tool-name clay">
-              <Blocks size={23} />
-              clay
-            </div>
-            <div className="tool-name">
-              <span className="make-logo">▰▰▰</span>Make
-            </div>
-            <div className="tool-name">
-              <span className="n8n-logo">•••</span>n8n
+            <div className="toolbelt-tools" aria-label="Connected tools">
+              <div className="tool-name hubspot"><GitBranch size={24} aria-hidden="true" />HubSpot</div>
+              <div className="tool-name clay"><Blocks size={23} aria-hidden="true" />clay</div>
+              <div className="tool-name"><span className="make-logo" aria-hidden="true">▰▰▰</span>Make</div>
+              <div className="tool-name"><span className="n8n-logo" aria-hidden="true">•••</span>n8n</div>
+              <div className="tool-name"><Image src="/logos/zapier.svg" width={23} height={23} alt="" />Zapier</div>
+              <div className="tool-name"><Image src="/logos/claude.svg" width={24} height={24} alt="" />Claude Code</div>
+              <div className="tool-name"><Image src="/logos/salesforce.svg" width={30} height={24} alt="" />Salesforce</div>
             </div>
             <span className="toolbelt-end">
               THE RIGHT STACK.
