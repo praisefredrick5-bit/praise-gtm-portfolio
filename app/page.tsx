@@ -30,8 +30,8 @@ const expertise = [
   {
     icon: Workflow,
     number: "03",
-    title: "AI & Workflow Engineering",
-    text: "I build and design AI assisted workflows, automations, and integrations that reduce manual effort while keeping execution observable and controlled.",
+    title: "Automation & Troubleshooting",
+    text: "I build automated outbound with Zapier and Make, audit CRM workflows, and analyse integration and process issues to identify practical fixes.",
   },
   {
     icon: Layers3,
@@ -51,7 +51,7 @@ const skillGroups = [
   },
   {
     title: "Automation & Systems",
-    skills: ["Workflow automation", "AI assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
+    skills: ["Zapier outbound automation", "Make workflow automation", "Root cause analysis", "AI assisted operations", "Lead qualification", "Systems architecture", "CRM synchronization", "Failure monitoring design", "Process documentation", "Sales handoffs"],
   },
   {
     title: "API Integration & CLI Workflows",
@@ -67,11 +67,12 @@ const skillGroups = [
   },
 ];
 const toolGroups = [
-  { title: "CRM & Revenue", tools: ["HubSpot", "Salesforce"] },
-  { title: "Prospecting & Intelligence", tools: ["Clay", "Apollo", "Gojiberry", "Sumble", "LinkedIn Sales Navigator"] },
-  { title: "Outbound & Messaging", tools: ["Instantly", "Lemlist", "Octave", "HubSpot Sequences"] },
-  { title: "Automation & AI", tools: ["Claude Code", "ChatGPT", "Make", "Zapier", "n8n", "Swan"] },
-  { title: "Data & Development", tools: ["Excel", "Google Sheets", "GitHub", "Codex", "Vercel"] },
+  { title: "CRM & Lead Data", tools: ["HubSpot", "Airtable"] },
+  { title: "Prospecting & Intelligence", tools: ["Clay", "Apollo", "Sumble"] },
+  { title: "Outbound & Messaging", tools: ["Instantly", "HubSpot Sequences", "ManyChat"] },
+  { title: "Automation & AI", tools: ["Claude Code", "Make", "Zapier"] },
+  { title: "Data & Development", tools: ["Excel", "Google Sheets", "GitHub", "Codex"] },
+  { title: "Foundational Knowledge", tools: ["Salesforce integration"] },
 ];
 export default function Home() {
   return (
@@ -91,22 +92,24 @@ export default function Home() {
               I Build the Systems Behind <span>Revenue Growth.</span>
             </h1>
             <p className="hero-description">
-              I engineer intelligent go to market systems that turn data,
-              buying signals, and AI into coordinated revenue execution. From
-              multi agent orchestration to automated prospecting and scalable
-              growth infrastructure.
+              I build automated outbound workflows with Zapier and Make,
+              connect prospect data with HubSpot, and use Claude Code to develop
+              AI workflows. I audit CRM systems, analyse process failures, and
+              design practical fixes for revenue teams.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
-                Explore my work <ArrowUpRight size={17} />
+                View projects <ArrowUpRight size={17} />
+              </a>
+              <a className="button button-text" href="/Praise_Fredrick_GTM_RevOps_Resume.docx" download>
+                Download resume <ArrowDown size={17} />
               </a>
               <a className="button button-text" href="#contact">
-                Let’s connect <ArrowRight size={17} />
+                Contact <ArrowRight size={17} />
               </a>
             </div>
             <div className="hero-footnote">
-              <span className="small-cross">+</span> Strategy meets systems.
-              Systems drive growth.
+              <span className="small-cross">+</span> HubSpot Revenue Operations certified · Lagos, Nigeria · Open to remote roles
             </div>
           </div>
           <div className="hero-portrait-area">
@@ -127,6 +130,28 @@ export default function Home() {
             <a href="#expertise">
               SCROLL TO EXPLORE <ArrowDown size={13} />
             </a>
+          </div>
+        </section>
+        <section className="work-section section" id="work">
+          <div className="container">
+            <div className="section-heading work-heading">
+              <div>
+                <span className="eyebrow">
+                  <span /> SELECTED WORK
+                </span>
+                <h2>
+                  Systems with <span>purpose.</span>
+                </h2>
+              </div>
+              <p>
+                Architecture, tested prototypes and client implementation experience.
+                <br />
+                <span className="preview-note">
+                  Each project includes its delivery stage and my responsibilities
+                </span>
+              </p>
+            </div>
+            <Projects />
           </div>
         </section>
         <div className="toolbelt">
@@ -192,7 +217,7 @@ export default function Home() {
               <span className="eyebrow"><span /> CAPABILITIES</span>
               <h2>Practical skills. <span>Connected thinking.</span></h2>
             </div>
-            <p>From CRM API integrations and reproducible CLI workflows to tested automation, reliable execution, and clear documentation.</p>
+            <p>CRM audits, outbound automation, AI workflows and integration troubleshooting, supported by clear process documentation.</p>
           </div>
           <div className="capabilities-grid">
             {skillGroups.map((group) => (
@@ -212,7 +237,7 @@ export default function Home() {
                 <span className="eyebrow"><span /> MY TOOLKIT</span>
                 <h2>Tools for <span>revenue systems.</span></h2>
               </div>
-              <p>Platforms I work with, learn, and evaluate to solve GTM challenges. Listing a tool does not imply certification or advanced proficiency.</p>
+              <p>Tools used across my projects, with foundational Salesforce integration knowledge identified separately.</p>
             </div>
             <div className="toolkit-grid">
               {toolGroups.map((group) => (
@@ -224,29 +249,7 @@ export default function Home() {
                 </article>
               ))}
             </div>
-            <p className="toolkit-note">HubSpot Revenue Operations certified · Tool experience varies by platform.</p>
-          </div>
-        </section>
-        <section className="work-section section" id="work">
-          <div className="container">
-            <div className="section-heading work-heading">
-              <div>
-                <span className="eyebrow">
-                  <span /> SELECTED WORK
-                </span>
-                <h2>
-                  Systems with <span>purpose.</span>
-                </h2>
-              </div>
-              <p>
-                A look at how I approach revenue challenges.
-                <br />
-                <span className="preview-note">
-                  Real work, tested systems, and architecture in progress
-                </span>
-              </p>
-            </div>
-            <Projects />
+            <p className="toolkit-note">HubSpot Revenue Operations certified · Project status and scope are shown in each case study.</p>
           </div>
         </section>
         <section className="about-section container" id="about">
@@ -271,8 +274,10 @@ export default function Home() {
               connected, intentional, and useful.
             </p>
             <p>
-              I bring a systems mindset to CRM infrastructure, automation, and
-              revenue operations, connecting the details to the bigger picture.
+              I work from the business problem: audit the current process,
+              identify where data or follow up breaks down, and build or design
+              the next step. My Salesforce integration knowledge is foundational;
+              HubSpot, Zapier and Make are central to my practical work.
             </p>
             <a className="inline-link" href="#contact">
               Let’s build something that works <ArrowUpRight size={17} />
@@ -297,8 +302,8 @@ export default function Home() {
             <div className="contact-status">
               <span className="live-dot" /> Available to connect
             </div>
-            <a className="inline-link" href="mailto:Praisefpl@gmail.com">
-              Email me: Praisefpl@gmail.com <ArrowUpRight size={16} />
+            <a className="inline-link" href="mailto:praisefredrick5@gmail.com">
+              Email me: praisefredrick5@gmail.com <ArrowUpRight size={16} />
             </a>
             <a
               className="inline-link"

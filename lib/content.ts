@@ -1,6 +1,7 @@
 export const projects = [
   {
     number: "01",
+    slug: "oyoma-revenue-infrastructure",
     title: "Oyoma GTM Revenue Infrastructure",
     category: "GTM ENGINEERING · REVENUE ARCHITECTURE",
     description: "Designing a connected revenue system that links prospect intelligence, CRM governance, outbound execution, and operational reliability.",
@@ -18,6 +19,7 @@ export const projects = [
   },
   {
     number: "02",
+    slug: "ai-company-brain",
     title: "AI Company Brain",
     category: "AGENTIC AI · GTM ORCHESTRATION",
     description: "Built and successfully tested a company brain with a Chief of Staff coordinating specialist agents, scheduled work, and intent signal monitoring.",
@@ -35,6 +37,7 @@ export const projects = [
   },
   {
     number: "03",
+    slug: "auraleads-acquisition-automation",
     title: "AuraLeads Acquisition Automation",
     category: "CLIENT AUTOMATION · CRM INTEGRATION",
     description: "Built connected lead qualification workflows using HubSpot, Airtable, Make.com, and ManyChat to organize enquiries and support sales follow up.",
@@ -52,6 +55,7 @@ export const projects = [
   },
   {
     number: "04",
+    slug: "hillsview-customer-operations",
     title: "Hillsview Customer Operations",
     category: "CUSTOMER OPERATIONS · AUTOMATION",
     description: "Improved customer response and booking workflows through lead organization, automated communication, and structured follow up.",
@@ -69,6 +73,7 @@ export const projects = [
   },
   {
     number: "05",
+    slug: "fungasm-prospecting-campaigns",
     title: "Fungasm Prospecting and Campaigns",
     category: "GROWTH OPERATIONS · OUTREACH",
     description: "Supported prospecting, campaign operations, and event growth through audience research, outreach, and advertising.",
