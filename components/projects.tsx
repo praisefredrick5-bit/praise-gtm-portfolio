@@ -1,5 +1,3 @@
-"use client";
-import { useRef, useState } from "react";
 import {
   ArrowUpRight,
   Check,
@@ -7,7 +5,6 @@ import {
   GitBranch,
   Radar,
   Workflow,
-  X,
   Zap,
 } from "lucide-react";
 import { projects } from "@/lib/content";
@@ -87,80 +84,21 @@ function ProjectArt({ type }: { type: string }) {
   );
 }
 export function Projects() {
-  const dialog = useRef<HTMLDialogElement>(null);
-  const [selected, setSelected] = useState<(typeof projects)[number]>(
-    projects[0],
-  );
-  function show(project: (typeof projects)[number]) {
-    setSelected(project);
-    dialog.current?.showModal();
-  }
   return (
-    <>
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <button
-            className="project-card"
-            key={project.title}
-            onClick={() => show(project)}
-            aria-label={`Preview ${project.title} case study`}
-          >
-            <ProjectArt type={project.type} />
-            <div className="project-copy">
-              <div className="project-category">
-                {project.category}
-                <span>{project.number}</span>
-              </div>
-              <h3>
-                {project.title}
-                <ArrowUpRight size={20} />
-              </h3>
-              <p>{project.description}</p>
-              <div className="tags">
-                {project.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-              <div className="project-preview">
-                Explore case study <ArrowUpRight size={14} />
-              </div>
-            </div>
-          </button>
-        ))}
-      </div>
-      <dialog
-        ref={dialog}
-        className="project-dialog"
-        onClick={(event) => {
-          if (event.target === event.currentTarget) dialog.current?.close();
-        }}
-      >
-        <div className="dialog-content">
-          <button
-            className="dialog-close"
-            onClick={() => dialog.current?.close()}
-            aria-label="Close project preview"
-          >
-            <X size={22} />
-          </button>
-          <span className="eyebrow">PROJECT CASE STUDY</span>
-          <h2>{selected.title}</h2>
-          <p>{selected.detail}</p>
-          <p className="dialog-note">{selected.status}</p>
-          <h3>Work and responsibilities</h3>
-          <ul>
-            {selected.scope.map((item) => (
-              <li key={item}>
-                <Check size={16} />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <p className="dialog-note">
-            {selected.note}
-          </p>
-        </div>
-      </dialog>
-    </>
+    <div className="projects-grid">
+      {projects.map((project) => (
+        <a className="project-card" key={project.slug} href={`/work/${project.slug}`}>
+          <ProjectArt type={project.type} />
+          <div className="project-copy">
+            <div className="project-category">{project.category}<span>{project.number}</span></div>
+            <h3>{project.title}<ArrowUpRight size={20} /></h3>
+            <span className="project-status">{project.status}</span>
+            <p>{project.description}</p>
+            <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+            <div className="project-preview">View project details <ArrowUpRight size={16} /></div>
+          </div>
+        </a>
+      ))}
+    </div>
   );
 }

@@ -10,10 +10,10 @@ export function Navigation() {
           praise<span>.</span>
         </a>
         <nav aria-label="Main navigation" className="desktop-nav">
+          <a href="#work">Selected work</a>
           <a href="#expertise">Expertise</a>
           <a href="#skills">Skills</a>
           <a href="#tools">Tools</a>
-          <a href="#work">Selected work</a>
           <a href="#about">About</a>
         </nav>
         <a href="#contact" className="nav-contact">
@@ -36,10 +36,10 @@ export function Navigation() {
           aria-label="Mobile navigation"
         >
           {[
+            ["Selected work", "work"],
             ["Expertise", "expertise"],
             ["Skills", "skills"],
             ["Tools", "tools"],
-            ["Selected work", "work"],
             ["About", "about"],
             ["Contact", "contact"],
           ].map(([label, id]) => (
