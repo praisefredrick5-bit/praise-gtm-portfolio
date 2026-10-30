@@ -8,6 +8,8 @@
   --border: #242329;
   --muted: #929099;
   --purple: #ad83ff;
+  --yellow: #f4cf59;
+  --yellow-hover: #ffe28a;
 }
 * {
   box-sizing: border-box;
@@ -157,12 +159,12 @@ h1 span {
   border-radius: 5px;
 }
 .button-primary {
-  background: #b590ff;
-  color: #160e23;
-  box-shadow: 0 4px 24px #9e6dff14;
+  background: var(--yellow);
+  color: #19150b;
+  box-shadow: 0 4px 24px #f4cf591a;
 }
 .button-primary:hover {
-  background: #c7abff;
+  background: var(--yellow-hover);
   transform: translateY(-2px);
 }
 .button-text {
@@ -1716,4 +1718,39 @@ h2 span {
   .hero-portrait-area { min-height: 320px; margin-top: 20px; gap: 20px; }
   .hero-portrait-ring { width: min(76vw, 280px); }
   .hero-portrait-caption { font-size: 7px; letter-spacing: 1.5px; }
+}
+
+/* Warm yellow accents complement the purple brand palette. */
+.wordmark span,
+.small-cross,
+.about-mark > span {
+  color: var(--yellow);
+}
+.intro-line,
+.eyebrow > span {
+  background: var(--yellow);
+}
+.desktop-nav a:hover,
+.mobile-nav a:hover,
+.footer a:hover,
+.inline-link:hover,
+.project-preview:hover,
+.button-text:hover {
+  color: var(--yellow);
+}
+.nav-contact:hover {
+  border-color: var(--yellow);
+  background: #f4cf590d;
+}
+button:focus-visible,
+a:focus-visible {
+  outline-color: var(--yellow);
+}
+.contact-status .live-dot {
+  background: var(--yellow);
+  box-shadow: 0 0 8px #f4cf5966;
+}
+::selection {
+  background: var(--yellow);
+  color: #19150b;
 }
