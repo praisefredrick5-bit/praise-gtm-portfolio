@@ -50,7 +50,7 @@ export function RevenueWorkflow() {
         <div className={styles.workspace}>
           <div className={styles.feed}>
             <div className={styles.panelTitle}>SIGNAL INBOX <span>Example inputs</span></div>
-            {prospects.map((prospect, i) => <div className={styles.lead} key={prospect.name}><span className={styles.avatar}>{String(i + 1).padStart(2, "0")}</span><div><strong>{prospect.name}</strong><p>{prospect.signal}</p></div><span className={styles.signal}>↗</span></div>)}
+            {prospects.map((prospect, i) => <div className={styles.lead} key={prospect.name}><span className={styles.avatar}>{String(i + 1).padStart(2, "0")}</span><div><strong>{prospect.name}</strong><p>{prospect.signal}</p></div><span className={styles.signal}>{i === active % prospects.length ? selected.name + "…" : "Queued"}</span></div>)}
             <div className={styles.guardrail}><Filter size={15} /> Evidence first. Fit before volume.</div>
           </div>
           <div className={styles.ranking}>
@@ -59,8 +59,9 @@ export function RevenueWorkflow() {
           </div>
         </div>
         <div className={styles.orchestrator}><span className={styles.dot} /><strong>Claude coordinates the workflow</strong><span>Validation · retries · logs · review gates</span></div>
+        <div className={styles.activity} aria-hidden="true"><div><span className={styles.dot} />{playing && !reduced ? "PROCESSING DEMO" : "WORKFLOW DEMO"}<strong>0{active + 1} / 06 · {selected.name}</strong></div><div className={styles.track}><span key={active} /></div></div>
         <div className={styles.stages} aria-label="Workflow stages">
-          {stages.map((stage, i) => { const Icon = stage.icon; return <button key={stage.name} className={styles.stage} aria-pressed={active === i} aria-controls="workflow-detail" onClick={() => { setActive(i); setPlaying(false); }}><span className={styles.node}><Icon size={22} /></span><small>0{i + 1}</small><strong>{stage.name}</strong></button>; })}
+          {stages.map((stage, i) => { const Icon = stage.icon; return <button key={stage.name} className={styles.stage} aria-pressed={active === i} aria-controls="workflow-detail" onClick={() => { setActive(i); }}><span className={styles.node}><Icon size={22} /></span><small>0{i + 1}</small><strong>{stage.name}</strong></button>; })}
         </div>
         <div className={styles.detail} id="workflow-detail">
           <div><span className={styles.kicker}>{selected.tool}</span><h4>{selected.name}: the decision behind the step</h4><p>{selected.detail}</p></div>
