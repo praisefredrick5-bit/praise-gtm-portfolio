@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { Navigation } from "@/components/navigation";
 import { Projects } from "@/components/projects";
-import { SystemVisual } from "@/components/system-visual";
+import { RevenueWorkflow } from "@/components/revenue-workflow";
 const expertise = [
   {
     icon: GitBranch,
@@ -186,6 +186,7 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <RevenueWorkflow />
         <section className="section container capabilities-section" id="skills">
           <div className="section-heading">
             <div>
