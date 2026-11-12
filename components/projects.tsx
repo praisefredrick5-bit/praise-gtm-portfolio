@@ -12,6 +12,18 @@ import {
 } from "lucide-react";
 import { projects } from "@/lib/content";
 function ProjectArt({ type }: { type: string }) {
+  if (type === "intelligence") return (
+    <div className="project-art intelligence-art" aria-hidden="true">
+      <div className="intelligence-flow">
+        <div className="intelligence-step"><Radar size={16}/><span>DISCOVER</span><strong>Sumble + Apify</strong></div>
+        <div className="intelligence-link"/>
+        <div className="intelligence-step"><Zap size={16}/><span>QUALIFY</span><strong>Clay · Tier A–D</strong></div>
+        <div className="intelligence-link"/>
+        <div className="intelligence-step"><Database size={16}/><span>ACT + LEARN</span><strong>HubSpot + Lemlist</strong></div>
+      </div>
+      <div className="intelligence-foot">SIGNALS → SCORES → PIPELINE</div>
+    </div>
+  );
   if (type === "health")
     return (
       <div className="project-art health-art" aria-hidden="true">
@@ -156,9 +168,17 @@ export function Projects() {
               </li>
             ))}
           </ul>
-          <p className="dialog-note">
-            {selected.note}
-          </p>
+          <p className="dialog-note">{selected.note}</p>
+          {selected.type === "intelligence" && (
+            <div className="intelligence-case-study">
+              <h3>System workflow</h3>
+              <p>Discover → enrich → score company, persona and intent separately → qualify Tier A–D → sync HubSpot → validate → execute Lemlist outreach → review pipeline outcomes.</p>
+              <h3>Engineering decisions</h3>
+              <p>High intent cannot override poor fit. Suppression, duplicate, and contact validation checks gate enrolment. Claude Code develops orchestration logic; deployed jobs execute workflows.</p>
+              <h3>Evidence and limitations</h3>
+              <p>The interactive prototype uses illustrative prospects, simulated events and sample metrics. Production integrations and revenue results are not claimed.</p>
+            </div>
+          )}
         </div>
       </dialog>
     </>

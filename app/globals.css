@@ -1754,3 +1754,20 @@ a:focus-visible {
   background: var(--yellow);
   color: #19150b;
 }
+
+
+/* Oyoma intelligence project: inherits the portfolio's purple/yellow identity. */
+.intelligence-art { flex-direction:column; gap:16px; background:radial-gradient(ellipse at center,#42235465,transparent 72%),#16101f; }
+.intelligence-flow { display:flex; align-items:center; justify-content:center; width:94%; gap:5px; }
+.intelligence-step { display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; min-width:0; flex:1; border:1px solid #6e4b88; background:#23172f; border-radius:6px; padding:15px 4px; box-shadow:0 0 22px #ad83ff18; }
+.intelligence-step svg { color:var(--yellow); }
+.intelligence-step span { font:8px monospace; letter-spacing:1px; color:#c8a7e7; }
+.intelligence-step strong { font-size:9px; font-weight:500; color:#f4f2f8; }
+.intelligence-link { width:14px; height:1px; flex-shrink:0; background:var(--yellow); position:relative; }
+.intelligence-link::after { content:""; position:absolute; right:0; top:-2px; width:5px; height:5px; border-top:1px solid var(--yellow); border-right:1px solid var(--yellow); transform:rotate(45deg); }
+.intelligence-foot { color:var(--yellow); font:8px monospace; letter-spacing:1.5px; }
+.intelligence-case-study { border-top:1px solid #37273e; margin-top:24px; padding-top:6px; }
+.intelligence-case-study p { font-size:12px; color:#aba0b4; line-height:1.8; margin-top:10px; }
+@media (max-width:420px) { .intelligence-step strong { font-size:7px; } .intelligence-step span { font-size:6px; } .intelligence-link { width:7px; } }
+@media (prefers-reduced-motion:no-preference) { .intelligence-step { animation:intelligence-enter .8s ease both; } .intelligence-step:nth-of-type(3) { animation-delay:.15s; } .intelligence-step:nth-of-type(5) { animation-delay:.3s; } }
+@keyframes intelligence-enter { from { opacity:.35; transform:translateY(9px); } to { opacity:1; transform:translateY(0); } }
