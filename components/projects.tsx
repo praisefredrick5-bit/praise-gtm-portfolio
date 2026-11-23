@@ -11,7 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import { projects } from "@/lib/content";
-function ProjectArt({ type }: { type: string }) {
+function ProjectArt({ type, number }: { type: string; number: string }) {
   if (type === "intelligence") return (
     <div className="project-art intelligence-art" aria-hidden="true">
       <div className="intelligence-flow">
@@ -24,36 +24,35 @@ function ProjectArt({ type }: { type: string }) {
       <div className="intelligence-foot">SIGNALS → SCORES → PIPELINE</div>
     </div>
   );
-  if (type === "health")
+  if (type === "health") {
+    const isAuraLeads = number === "03";
+    const steps = isAuraLeads
+      ? ["ManyChat · Lead captured", "Airtable · Qualification", "Make · Workflow routing", "HubSpot · CRM follow-up"]
+      : ["Customer enquiry", "Booking coordination", "Follow-up & handoff"];
     return (
-      <div className="project-art health-art" aria-hidden="true">
-        <div className="mini-window">
-          <div className="window-top">
-            <span className="window-dots">•••</span>
-            <span>CRM HEALTH OVERVIEW</span>
-            <Database size={12} />
+      <div className="project-art acquisition-art" aria-hidden="true">
+        <div className="acquisition-workflow">
+          <div className="acquisition-heading">
+            <span className="acquisition-kicker">{isAuraLeads ? "AURALEADS / LEAD JOURNEY" : "HILLSVIEW / CUSTOMER JOURNEY"}</span>
+            <span className="acquisition-live"><span className="acquisition-live-dot" /> WORKFLOW</span>
           </div>
-          <div className="health-heading">
-            <span>Data integrity</span>
-            <span className="healthy">● Monitoring</span>
-          </div>
-          {["Contact records", "Lifecycle stages", "Pipeline properties"].map(
-            (label, i) => (
-              <div className="health-row" key={label}>
-                <span className="mini-check">
-                  <Check size={10} />
-                </span>
-                <span>{label}</span>
-                <div className={`mini-bar bar-${i}`} />
+          <div className="acquisition-steps">
+            {steps.map((step, index) => (
+              <div className="acquisition-step" key={step}>
+                <span className="acquisition-step-index">{String(index + 1).padStart(2, "0")}</span>
+                <span className="acquisition-step-label">{step}</span>
+                <Check size={13} className="acquisition-step-check" />
               </div>
-            ),
-          )}
-        </div>
-        <div className="floating-label">
-          <Check size={12} /> Clean data. Clear decisions.
+            ))}
+          </div>
+          <div className="acquisition-footer">
+            <span>{isAuraLeads ? "CAPTURE → QUALIFY → SYNC" : "ENQUIRY → BOOKING → FOLLOW-UP"}</span>
+            <Workflow size={15} />
+          </div>
         </div>
       </div>
     );
+  }
   if (type === "signal")
     return (
       <div className="project-art signal-art" aria-hidden="true">
@@ -117,7 +116,7 @@ export function Projects() {
             onClick={() => show(project)}
             aria-label={`Preview ${project.title} case study`}
           >
-            <ProjectArt type={project.type} />
+            <ProjectArt type={project.type} number={project.number} />
             <div className="project-copy">
               <div className="project-category">
                 {project.category}
