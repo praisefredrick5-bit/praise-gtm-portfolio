@@ -1892,3 +1892,66 @@ a:focus-visible {
   .projects-grid { grid-template-columns: 1fr; }
   .project-card { height: auto; }
 }
+
+/* Mobile-safe, project-specific lead journey art (replaces clipped CRM mockup). */
+.acquisition-art {
+  width: 100%;
+  padding: 20px;
+  background: radial-gradient(circle at 50% 50%, #76509229, transparent 76%), #17121d !important;
+}
+.acquisition-workflow {
+  width: min(100%, 360px);
+  max-width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #5d456b;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #241a2d, #17131d);
+  box-shadow: 0 12px 26px #0005;
+}
+.acquisition-heading, .acquisition-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.acquisition-kicker, .acquisition-live, .acquisition-footer {
+  font: 8px/1.5 monospace;
+  letter-spacing: .65px;
+}
+.acquisition-kicker { color: #d4b6ee; }
+.acquisition-live { color: #f4cf59; white-space: nowrap; }
+.acquisition-live-dot {
+  display: inline-block; width: 5px; height: 5px;
+  background: #f4cf59; border-radius: 50%; vertical-align: middle;
+}
+.acquisition-steps { display: grid; gap: 6px; margin: 11px 0; }
+.acquisition-step {
+  display: flex; align-items: center; gap: 10px;
+  min-width: 0; padding: 7px 9px;
+  background: #30233a; border: 1px solid #533d61;
+  border-radius: 5px;
+}
+.acquisition-step-index { color: #f4cf59; font: 9px monospace; flex-shrink: 0; }
+.acquisition-step-label {
+  color: #e0d5e9; font-size: 10px; line-height: 1.3;
+  min-width: 0; overflow-wrap: anywhere;
+}
+.acquisition-step-check { color: #b99ad4; margin-left: auto; flex-shrink: 0; }
+.acquisition-footer { border-top: 1px solid #4a3854; padding-top: 9px; color: #aa91bd; }
+.acquisition-footer svg { color: #f4cf59; flex-shrink: 0; }
+@media (max-width: 520px) {
+  .acquisition-art { padding: 12px; }
+  .acquisition-workflow { padding: 12px; }
+  .acquisition-kicker, .acquisition-live, .acquisition-footer { font-size: 7px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .acquisition-step { animation: acquisition-illuminate 4.8s ease-in-out infinite; }
+  .acquisition-step:nth-child(2) { animation-delay: 1.2s; }
+  .acquisition-step:nth-child(3) { animation-delay: 2.4s; }
+  .acquisition-step:nth-child(4) { animation-delay: 3.6s; }
+}
+@keyframes acquisition-illuminate {
+  0%, 85%, 100% { border-color: #533d61; background: #30233a; }
+  15%, 30% { border-color: #d5ae5d; background: #43312f; }
+}
