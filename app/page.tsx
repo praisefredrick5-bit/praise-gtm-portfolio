@@ -96,6 +96,13 @@ export default function Home() {
               multi agent orchestration to automated prospecting and scalable
               growth infrastructure.
             </p>
+            <div className="hero-personal-note">
+              <span className="hero-personal-icon" aria-hidden="true">♫</span>
+              <p>
+                When I’m not connecting revenue systems, I’m probably playing
+                guitar, chasing a football, or figuring out how something works.
+              </p>
+            </div>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
                 Explore my work <ArrowUpRight size={17} />
@@ -105,8 +112,7 @@ export default function Home() {
               </a>
             </div>
             <div className="hero-footnote">
-              <span className="small-cross">+</span> Strategy meets systems.
-              Systems drive growth.
+              <span className="small-cross">+</span> Good systems. Good music. A good game of football.
             </div>
           </div>
           <div className="hero-portrait-area">
