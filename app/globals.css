@@ -1801,3 +1801,18 @@ a:focus-visible {
   .hero-personal-note p { font-size: 11px; line-height: 1.65; }
   .hero-actions { margin-top: 23px; }
 }
+
+/* Gentle floating music-note motion in the hero, with reduced-motion support. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-personal-icon {
+    display: inline-block;
+    transform-origin: center bottom;
+    animation: hero-note-float 3.2s ease-in-out infinite;
+    will-change: transform;
+  }
+}
+@keyframes hero-note-float {
+  0%, 100% { transform: translateY(0) rotate(-7deg); }
+  45% { transform: translateY(-5px) rotate(9deg); }
+  70% { transform: translateY(-2px) rotate(-2deg); }
+}
