@@ -1816,3 +1816,79 @@ a:focus-visible {
   45% { transform: translateY(-5px) rotate(9deg); }
   70% { transform: translateY(-2px) rotate(-2deg); }
 }
+
+/* Selected Work refresh: distinct visual identities, clearer hierarchy, responsive cards. */
+.projects-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+.project-card {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: #131117;
+  box-shadow: 0 12px 32px #00000018;
+}
+.project-card .project-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.project-card .project-copy h3 {
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+.project-card .project-copy p {
+  flex: 1;
+  min-height: 0;
+}
+.project-card .project-preview { margin-top: 22px; }
+.project-card .project-art { isolation: isolate; }
+.project-card--intelligence .project-art {
+  background: radial-gradient(ellipse at 50% 70%, #6e3aa44b, transparent 72%), #17101f;
+}
+.project-card--signal .project-art {
+  background: radial-gradient(circle at 80% 25%, #6a4e9b40, transparent 60%), #15111d;
+}
+.project-card--health .project-art {
+  background: radial-gradient(circle at 30% 20%, #d0ad4821, transparent 65%), #17151a;
+}
+.project-card--health .floating-label {
+  border-color: #a18a4d88;
+  color: #f4cf59;
+  background: #2b251b;
+}
+.project-card--health .mini-window {
+  border-color: #7b685b;
+  transform: perspective(500px) rotateY(-3deg) rotateX(2deg);
+}
+.project-card:focus-visible { outline: 2px solid var(--yellow); outline-offset: 4px; }
+.project-card:hover .project-preview { color: var(--yellow); }
+@media (prefers-reduced-motion: no-preference) {
+  .project-card { transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease; }
+  .project-card:hover { box-shadow: 0 18px 45px #ad83ff16; }
+  .project-card--intelligence .intelligence-step { animation: project-node-glow 3.6s ease-in-out infinite; }
+  .project-card--intelligence .intelligence-step:nth-of-type(3) { animation-delay: 1.2s; }
+  .project-card--intelligence .intelligence-step:nth-of-type(5) { animation-delay: 2.4s; }
+  .project-card--signal .pulse-dot { animation: project-signal-pulse 2.2s ease-in-out infinite; }
+  .project-card--health .mini-bar { transform-origin: left center; animation: project-data-grow 3.4s ease-in-out infinite alternate; }
+}
+@keyframes project-node-glow {
+  0%, 100% { border-color: #6e4b88; box-shadow: 0 0 5px #ad83ff0a; }
+  35% { border-color: #f4cf59; box-shadow: 0 0 17px #f4cf5940; }
+}
+@keyframes project-signal-pulse {
+  0%,100% { opacity: .5; box-shadow: 0 0 3px #ad83ff55; }
+  50% { opacity: 1; box-shadow: 0 0 15px #ad83ff; }
+}
+@keyframes project-data-grow {
+  from { transform: scaleX(.65); }
+  to { transform: scaleX(1); }
+}
+@media (max-width: 760px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { height: auto; }
+}
