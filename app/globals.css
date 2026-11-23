@@ -1771,3 +1771,33 @@ a:focus-visible {
 @media (max-width:420px) { .intelligence-step strong { font-size:7px; } .intelligence-step span { font-size:6px; } .intelligence-link { width:7px; } }
 @media (prefers-reduced-motion:no-preference) { .intelligence-step { animation:intelligence-enter .8s ease both; } .intelligence-step:nth-of-type(3) { animation-delay:.15s; } .intelligence-step:nth-of-type(5) { animation-delay:.3s; } }
 @keyframes intelligence-enter { from { opacity:.35; transform:translateY(9px); } to { opacity:1; transform:translateY(0); } }
+
+/* Personal signature in the hero: subtle, accessible and mobile friendly. */
+.hero-personal-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 450px;
+  margin-top: 22px;
+  padding: 13px 15px;
+  border-left: 2px solid var(--yellow);
+  background: linear-gradient(90deg, #f4cf590b, transparent);
+  border-radius: 0 5px 5px 0;
+}
+.hero-personal-icon {
+  color: var(--yellow);
+  font-size: 21px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.hero-personal-note p {
+  margin: 0;
+  color: #b9b2c2;
+  font-size: 12px;
+  line-height: 1.75;
+}
+@media (max-width: 520px) {
+  .hero-personal-note { margin-top: 18px; padding: 10px 12px; gap: 10px; }
+  .hero-personal-note p { font-size: 11px; line-height: 1.65; }
+  .hero-actions { margin-top: 23px; }
+}
