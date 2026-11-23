@@ -112,7 +112,7 @@ export function Projects() {
       <div className="projects-grid">
         {projects.map((project) => (
           <button
-            className="project-card"
+            className={`project-card project-card--${project.type}`}
             key={project.title}
             onClick={() => show(project)}
             aria-label={`Preview ${project.title} case study`}
